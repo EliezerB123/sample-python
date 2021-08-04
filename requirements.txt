@@ -51,7 +51,6 @@ pdbi==0.1
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==7.2.0
-pkg-resources==0.0.0
 prometheus-client==0.7.1
 prompt-toolkit==2.0.10
 ptyprocess==0.6.0
