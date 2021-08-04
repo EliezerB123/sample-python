@@ -44,7 +44,7 @@ networkx==2.4
 notebook==6.0.2
 numpy==1.18.1
 osmnx==0.15.1
-pandas==1.2.0
+pandas==1.1.5
 pandocfilters==1.4.2
 parso==0.5.2
 pdbi==0.1
