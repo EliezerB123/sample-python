@@ -16,3 +16,11 @@ import osmnx as ox
 import networkx as nx
 
 print('done')
+
+def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
+    server_address = ('', 8080)
+    httpd = server_class(server_address, handler_class)
+    httpd.serve_forever()
+
+
+run()
