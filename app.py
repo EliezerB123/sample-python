@@ -15,12 +15,20 @@ from pyproj import Proj, CRS, Transformer
 import osmnx as ox
 import networkx as nx
 
+
+#Import HTTP modules
+import http.server
+import socketserver
+import sys
+
+
 print('done')
 
-def run(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
-    server_address = ('', 8080)
-    httpd = server_class(server_address, handler_class)
+
+PORT = 8000
+
+handler = http.server.SimpleHTTPRequestHandler
+
+with socketserver.TCPServer(("", PORT), handler) as httpd:
+    print("Server started at localhost:" + str(PORT))
     httpd.serve_forever()
-
-
-run()
