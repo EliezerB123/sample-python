@@ -44,7 +44,7 @@ networkx==2.4
 notebook==6.0.2
 numpy==1.18.1
 osmnx==0.15.1
-pandas==1.2.0
+pandas==1.1.5
 pandocfilters==1.4.2
 parso==0.5.2
 pdbi==0.1
@@ -65,6 +65,7 @@ pytz==2020.1
 pyzmq==18.1.1
 qtconsole==4.6.0
 requests==2.24.0
+Rtree>=0.9.4
 Send2Trash==1.5.0
 Shapely==1.7.0
 six==1.13.0
