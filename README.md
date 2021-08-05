@@ -23,3 +23,4 @@ https://github.com/Toblerity/rtree/issues/64
 sudo apt install libspatialindex-dev python-rtree
 use python3-rtree instead.
 
+Removed entirely, temporarily.
