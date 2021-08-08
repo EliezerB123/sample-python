@@ -16,7 +16,7 @@ import osmnx as ox
 import networkx as nx
 
 
-#Import HTTP modules
+#Import SimpleHTTPServer modules
 import http.server
 import socketserver
 import sys
