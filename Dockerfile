@@ -1,6 +1,3 @@
-# Source: https://github.com/sclorg/s2i-python-container/tree/master/3.8
-#FROM registry.access.redhat.com/ubi8/python-38
-#FROM python:3
 FROM python:3.8-buster
 WORKDIR /usr/src/app
 
