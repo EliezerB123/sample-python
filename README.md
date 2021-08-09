@@ -1,10 +1,6 @@
-oc new-app --name=fatfish-sample-app https://github.com/Terrafire123/sample-python.git --strategy="docker" -o yaml >samplebuildconfig.yaml
-
-
-
 1. Create a dockerhub account.
 2. Create a new private repository, called "sample-python-repo".
-# When building the docker image, give it a name {Username}/{RepoName}:{tag}
+ (When building the docker image, give it a name {Username}/{RepoName}:{tag})
 3. sudo docker build -t eliezerberlin/sample-python-repo:latest .
 4. sudo docker login
 5. sudo docker push eliezerberlin/sample-python-repo:latest
