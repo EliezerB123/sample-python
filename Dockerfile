@@ -6,13 +6,7 @@ RUN apt-get update && \
 apt-get -y install libgeos-dev && \ 
 apt-get clean
 
-
-# Add application sources with correct permissions for OpenShift
-#USER 0
 ADD src .
-#RUN chown -R 1001:0 ./
-#USER 1001
-
 
 # Install the dependencies
 # Some of these are technically for Django, and are just here to show how to run extra commands.
