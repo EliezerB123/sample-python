@@ -22,6 +22,6 @@
 
     8a. "Create Route" button.
 
-    8b. Target Port "8080"
+    8b. Target Port "8080" -> "8080" (That means outer port 8080 should be forwarded to inner port 8080)
 
     8c. "Secure Route" : TRUE
