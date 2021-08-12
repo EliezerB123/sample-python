@@ -1,5 +1,5 @@
 1. Create a dockerhub account.
-2. Create a new private repository, called "sample-python-repo".
+2. Create a new public repository, called "sample-python-repo".
 
      
 
