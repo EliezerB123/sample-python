@@ -90,6 +90,10 @@
 
 --------
 
-The way the Persistent Filesystem works is as follows:
+Note: The way the Persistent Filesystem works is as follows:
 Anything located inside the directory "/data" (As defined in step 11e) will persist when the server is restarted.
 
+
+--------
+Note: When running a local copy of Docker, if you want to run with Enviroment variables, you can run the following command:
+sudo docker run --env-file .env NameOfImage
