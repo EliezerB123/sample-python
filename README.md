@@ -33,6 +33,7 @@
     9b. Press "Create Secret"
 
     9c. 
+    
         "Secret Type": Generic Secret
         "Secret Name": "my-python-git-credentials"
 
@@ -64,6 +65,7 @@
     10b. Press "Create Storage".
 
     10c.  (More info: https://docs.openshift.com/online/pro/architecture/additional_concepts/storage.html#pv-access-modes)
+
         "Storage Class" : (Whatever you like)
         "Name" : My-Python-Disk
         "Size" : 1GB
