@@ -33,7 +33,7 @@
     9b. Press "Create Secret"
 
     9c. 
-    
+
         "Secret Type": Generic Secret
         "Secret Name": "my-python-git-credentials"
 
@@ -67,12 +67,14 @@
     10c.  (More info: https://docs.openshift.com/online/pro/architecture/additional_concepts/storage.html#pv-access-modes)
 
         "Storage Class" : (Whatever you like)
+
         "Name" : My-Python-Disk
-        "Size" : 1GB
+        
+        "Size" : 2GB
     
     10d. Press "Create".
     
-11. Attach our new storage to our Instance. (This will cause the instance to reload automatically with the new storage.)
+11. Attach our new storage to our Instance. (This will create a directory "/data", within which everything is persistent.)
     
     11a. Go to Applications->Deployments (https://console.pro-us-east-1.openshift.com/console/project/fatfish-test/browse/deployments)
 
