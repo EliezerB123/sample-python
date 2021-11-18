@@ -43,7 +43,7 @@
         Value: (The GIT username)
 
         Key: GIT_PASS
-        Value: (The GIT password. Note that if the password has any special characters, they need to be escaped, as per https://en.wikipedia.org/wiki/Percent-encoding#Reserved_characters. For example, "p@ssw0rd" would turn into "p%40ssw0rd", since we must remove the "@". )
+        Value: (The GIT password. Note that if the password has any special characters, they need to be escaped, as per https://en.wikipedia.org/wiki/Percent-encoding#Reserved_characters. For example, "p@ssw0rd" would turn into "p%40ssw0rd", since we must replace the "@" with "%40". )
 
         Key: GIT_URL
         Value: (HTTPS GIT URL. For example, "bitbucket.org/urban_dash/urban-utils.git" )
