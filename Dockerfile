@@ -1,5 +1,5 @@
-FROM python:3.8-buster
-
+# FROM nytimes/blender:2.82-gpu-ubuntu18.04
+FROM nytimes/blender:latest
 
 # This works perfectly.. except that Openshift won't let us change to the user "Docker".
 # # Install SUDO
@@ -24,16 +24,21 @@ WORKDIR /usr/src/app
 RUN apt-get update && \ 
     apt-get -y install libgeos-dev && \ 
     apt-get clean
+    # pip install --upgrade pip && \
+    # pip install wheel
 
 ADD src .
+
+# Add symbolic link for the Python installed on the system.
+RUN ln -sf /bin/3.0/python/bin/python3.9 /usr/bin/python3
 
 # Install the dependencies
 # Some of these are technically for Django, and are just here to show how to run extra commands.
 # Note: these commands are commented out because they were moved from Build-time to run-time, so
 # that we can run them AFTER running git clone.
 # RUN pip install -r requirements.txt && \
-#    python app.py collectstatic --noinput && \
-#    python app.py migrate 
+#    python3 app.py collectstatic --noinput && \
+#    python3 app.py migrate 
 
 
 # Allow Port 8080 from within app.
@@ -50,13 +55,9 @@ RUN chmod -R 775 /usr/src/app
 
 # Run the application
 # Here we immediately first create a directory to verify we have write permissions.
-# If that succeeds, then we continue with the GIT CLONE.
-CMD mkdir fishes && ls -la && git clone https://${GIT_USERNAME}:${GIT_PASS}@${GIT_URL} gitSrc && \
-    cd gitSrc && \ 
-    git checkout ${GIT_BRANCH} && \
-    cd .. && \ 
-    # pip install -r requirements.txt && \
-    # python app.py collectstatic --noinput && \
-    # python app.py migrate && \
-    # python app.py && \
-    python -m http.server 8080
+# If that succeeds, then we continue with the Blender.
+CMD mkdir checkPermissions && ls -la && \
+    python3 app.py && \
+    blender --background -noaudio ./light-work.blend --render-output //output/render_ -F PNG -E CYCLES --frame-start 2 --frame-end 3 --render-anim && \
+    python3 app.py && \
+    python3 -m http.server 8080
