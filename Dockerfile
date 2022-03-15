@@ -56,8 +56,9 @@ RUN chmod -R 775 /usr/src/app
 # Run the application
 # Here we immediately first create a directory to verify we have write permissions.
 # If that succeeds, then we continue with the Blender.
-CMD mkdir checkPermissions && ls -la && \
+CMD mkdir checkPermissions && pwd && ls -la && \
     python3 app.py && \
-    blender --background -noaudio ./light-work.blend --render-output //output/render_ -F PNG -E CYCLES --frame-start 2 --frame-end 3 --render-anim && \
+    # blender --background -noaudio ./light-work.blend --render-output //output/render_ -F PNG -E CYCLES --frame-start 2 --frame-end 3 --render-anim && \
+    blender --background -noaudio --python ./blenderGit/scripts/AllScripts.py && \
     python3 app.py && \
     python3 -m http.server 8080
