@@ -3,6 +3,7 @@ attrs==21.4.0
 click==8.0.4
 flasgger==0.9.5
 Flask==2.0.3
+Flask-API==3.0.post1
 flask-swagger==0.2.14
 importlib-metadata==4.11.3
 importlib-resources==5.4.0
